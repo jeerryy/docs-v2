@@ -109,7 +109,8 @@ are joined.
 
 ### Join predicate function (on)
 
-`join` package functions require the `on` parameter to compare values from each input stream (represented by `l` (left) and `r` (right))
+`join` package functions _(except [`join.time()`](/flux/v0/stdlib/join/time/))_
+require the `on` parameter to compare values from each input stream (represented by `l` (left) and `r` (right))
 and returns `true` or `false`.
 Rows that return `true` are joined.
 This parameter is a [predicate function](/flux/v0/get-started/syntax-basics/#predicate-functions).
@@ -121,8 +122,7 @@ This parameter is a [predicate function](/flux/v0/get-started/syntax-basics/#pre
 
 ### Join output function (as)
 
-`join` package functions _(except [`join.time()`](/flux/v0/stdlib/join/time/))_
-require the `as` parameter to define the output schema of the join.
+`join` package functions require the `as` parameter to define the output schema of the join.
 The `as` parameter returns a new record using values from
 joined rows–left (`l`) and right (`r`).
 
